@@ -92,98 +92,85 @@ ul {
     width: 100%;
 }
 
-/* حاوية أزرار التحكم (اللغة والثيم) */
-.nav-controls {
+/* حاوية الأزرار العائمة (أسفل اليمين) */
+.floating-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse; /* الترتيب من الأسفل للأعلى */
     gap: 10px;
+    align-items: center;
 }
 
 /* زر الثيم (Toggle Switch Style) */
 .theme-toggle {
-    background: transparent;
-    border: none;
+    /* تحويل زر الثيم ليكون دائرياً ومتناسقاً مع القائمة العائمة */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 2px solid var(--primary-color);
     cursor: pointer;
-    padding: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    width: 50px;
-    height: 26px;
-    background-color: #333;
-    border-radius: 50px;
-    border: 2px solid var(--border-color);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
 }
 
-[data-theme="light"] .theme-toggle {
-    background-color: #e0e0e0;
-    border-color: #ccc;
+.theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 .toggle-track {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 6px;
-    align-items: center;
+    /* إخفاء المسار القديم */
+    display: none;
 }
 
 .toggle-icon svg {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
     fill: none;
-    stroke: var(--primary-color);
+    stroke: var(--text-color);
     stroke-width: 2;
 }
 
+/* إظهار أيقونة واحدة بناءً على الثيم */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
 .toggle-thumb {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-/* تحريك الكرة في الوضع الليلي (الافتراضي في CSS المتغيرات هو Dark، لكن هنا نعتمد على data-theme) */
-/* سنفترض أن الوضع الافتراضي (بدون كلاس) هو Dark، لذا الكرة على اليمين؟ 
-   أو نعتمد على data-theme="light" لتحريكها.
-   لنجعل الوضع الافتراضي (Dark): الكرة على اليمين (Moon).
-   الوضع الفاتح (Light): الكرة على اليسار (Sun).
-*/
-
-/* تعديل: لنجعل الكرة تتحرك بناءً على الثيم */
-[data-theme="dark"] .toggle-thumb {
-    transform: translateX(24px);
-    background-color: var(--primary-color);
-}
-
-[data-theme="light"] .toggle-thumb {
-    transform: translateX(0);
-    background-color: var(--primary-color);
+    display: none; /* إخفاء الكرة القديمة */
 }
 
 /* زر اللغة */
 .lang-btn {
-    background: transparent;
+    background: var(--card-bg);
     border: 2px solid var(--primary-color);
     color: var(--text-color);
-    padding: 5px 15px;
-    border-radius: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     font-weight: bold;
     font-family: var(--font-en);
     transition: 0.3s;
     font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .lang-btn:hover {
-    background: var(--primary-color);
-    color: #fff;
+    transform: scale(1.1);
 }
 
 /* زر القائمة (مخفي في الديسكتوب ويظهر في الموبايل) */
@@ -200,6 +187,7 @@ ul {
     font-weight: bold;
     color: var(--primary-color);
     position: relative;
+    margin-left: 20px; /* مسافة عن الحافة */
 }
 
 .logo.glitch::before, .logo.glitch::after {
@@ -241,11 +229,12 @@ ul {
 .nav-menu {
     display: flex;
     gap: 20px;
-    margin: 0 auto; /* توسيط القائمة */
+    margin-left: 50px; /* دفع القائمة قليلاً عن الحافة اليسرى في الوضع العربي */
 }
 
 .nav-menu a {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
@@ -726,23 +715,25 @@ section {
 
 /* --- Scroll To Top --- */
 #scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
+    display: none; /* يتم التحكم به عبر JS */
+    width: 45px;
+    height: 45px;
     border: none;
     outline: none;
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
 }
 
 #scrollToTopBtn:hover {
-    background-color: #555;
+    transform: translateY(-3px);
 }
 
 /* --- Responsive (Mobile) --- */
@@ -772,13 +763,6 @@ section {
 
     .menu-toggle {
         display: none; /* إخفاء زر القائمة */
-    }
-
-    /* تنسيق حاوية الأزرار في الموبايل */
-    .nav-controls {
-        gap: 5px;
-        order: 0; /* الترتيب كما هو */
-        flex-shrink: 0; /* منع تقلص الأزرار */
     }
 
     /* Hero Mobile: Stacked */

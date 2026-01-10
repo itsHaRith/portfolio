@@ -20,8 +20,25 @@ window.onscroll = function() {
 };
 
 scrollToTopBtn.addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    // دالة للصعود الناعم والبطيء
+    const duration = 1500; // المدة بالمللي ثانية (1.5 ثانية) - عدل هذا الرقم لزيادة/إنقاص السرعة
+    const start = window.scrollY;
+    const startTime = performance.now();
+
+    function animation(currentTime) {
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // دالة Ease Out Cubic لحركة ناعمة في النهاية
+        const ease = 1 - Math.pow(1 - progress, 3);
+        
+        window.scrollTo(0, start * (1 - ease));
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+    requestAnimationFrame(animation);
 });
 
 // أنيميشن المهارات (Skills Animation)

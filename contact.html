@@ -19,20 +19,6 @@
                 <li><a href="services" data-i18n="nav_services">Services</a></li>
                 <li><a href="contact" class="active" data-i18n="nav_contact">Contact</a></li>
             </ul>
-            <div class="nav-controls">
-                <button id="lang-btn" class="lang-btn">AR</button>
-                <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
-                    <div class="toggle-track">
-                        <span class="toggle-icon icon-sun">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        </span>
-                        <span class="toggle-icon icon-moon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                        </span>
-                    </div>
-                    <div class="toggle-thumb"></div>
-                </button>
-            </div>
         </div>
     </nav>
 
@@ -124,7 +110,21 @@
         </div>
     </footer>
 
-    <button id="scrollToTopBtn" title="Go to top">▲</button>
+    <!-- القائمة العائمة (أزرار التحكم + الصعود للأعلى) -->
+    <div class="floating-controls">
+        <button id="scrollToTopBtn" title="Go to top">▲</button>
+        
+        <button id="lang-btn" class="lang-btn">AR</button>
+        
+        <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
+            <span class="toggle-icon icon-sun">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+            <span class="toggle-icon icon-moon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+        </button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
