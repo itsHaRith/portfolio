@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- خلفية دائرية بتصميم انسيابي (غير منتظم تماماً) -->
+  <path d="M50 5 C 22 8, 5 25, 8 50 C 10 78, 25 92, 50 90 C 78 88, 95 75, 92 50 C 90 22, 75 8, 50 5 Z" fill="#e50914" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- حرفي Ha في المنتصف -->
+  <text x="50" y="65" font-family="sans-serif" font-weight="900" font-size="45" text-anchor="middle" fill="#000000">Ha</text>
+</svg>

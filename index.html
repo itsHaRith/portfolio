@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaRith | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- خطوط عربية وانجليزية من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo glitch" data-text="HaRith">HaRith</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="lang-btn" class="lang-btn">AR</button>
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="toggle-track">
+                        <span class="toggle-icon icon-sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </span>
+                        <span class="toggle-icon icon-moon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </span>
+                    </div>
+                    <div class="toggle-thumb"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو (المقدمة) -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-text hidden">
+                    <h1 data-i18n="hero_title">Hi, I'm <span class="highlight">Harith</span></h1>
+                    <h3 class="job-title">Full Stack Web Developer & UI/UX Designer</h3>
+                    <p class="description" data-i18n="hero_desc">
+                        I work as a Freelance Web Developer specializing in building modern websites and applications.
+                        I combine my practical market experience with my academic studies in Computer Science at the University of Technology, giving me a deep understanding of programming fundamentals and the latest technologies.
+                        I master database management (MongoDB), Front-end development, and User Experience (UX) to provide you with a complete and professional digital product.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn" data-i18n="btn_contact">Contact Me</a>
+                        <a href="#projects" class="btn-outline" data-i18n="btn_projects">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-image hidden">
+                    <div class="img-box">
+                        <!-- ضع صورتك هنا -->
+                        <img src="images/photo_2025-10-18_04-40-05.jpg" alt="صورة حارث">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم المهارات -->
+    <section class="skills-section hidden">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Front-End</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-target="100">
+                            <div class="skill-info"><span class="skill-name">HTML</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="100">
+                            <div class="skill-info"><span class="skill-name">CSS</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="80">
+                            <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Back-End & Frameworks</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-target="80">
+                            <div class="skill-info"><span class="skill-name">React & Tailwind CSS</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="50">
+                            <div class="skill-info"><span class="skill-name">Next.js 16</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="70">
+                            <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="70">
+                            <div class="skill-info"><span class="skill-name">MongoDB</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="30">
+                            <div class="skill-info"><span class="skill-name">Django</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-target="20">
+                            <div class="skill-info"><span class="skill-name">Blender & Three.js (3D)</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>UI/UX Design</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-target="70">
+                            <div class="skill-info"><span class="skill-name">Figma</span><span class="skill-percent">0%</span></div>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section class="projects-section hidden" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects_title">My Projects</h2>
+            <div class="grid-container">
+                <!-- مشروع 1 -->
+                <div class="card project-card">
+                    <div class="card-img-holder">
+                        <!-- ضع صورة مشروعك هنا -->
+                        <img src="images/Screenshot 2026-01-09 215046.png" alt="موقع تجاري">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="proj_1_title">Commercial Website Design</h3>
+                        <p data-i18n="proj_1_desc">A fully responsive website to display products and services professionally.</p>
+                        <a href="https://itsharith.github.io/website_store/" class="btn-outline" target="_blank" data-i18n="btn_visit">Visit Site</a>
+                    </div>
+                </div>
+                <!-- مشروع 2 -->
+                <div class="card project-card">
+                    <div class="card-img-holder">
+                        <img src="images/Screenshot 2026-01-09 205644.png" alt="موقع تيدكس">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="proj_2_title">TEDx Website</h3>
+                        <p data-i18n="proj_2_desc">Design and development of a TEDx event website, including speakers and schedule.</p>
+                        <a href="https://itsharith.github.io/Tedx-Ui/" class="btn-outline" target="_blank" data-i18n="btn_visit">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الصور الخاصة (المعرض) -->
+    <section class="gallery-section hidden">
+        <div class="container">
+            <h2 class="section-title" data-i18n="gallery_title">Gallery</h2>
+            <p style="text-align: center; margin-bottom: 20px;" data-i18n="gallery_desc">A glimpse of my university and professional life</p>
+            <div class="grid-container">
+                <div class="photo-frame">
+                    <!-- ضع صورتك هنا -->
+                    <img src="images/photo1.jpg" alt="صورة خاصة">
+                </div>
+                <div class="photo-frame">
+                    <img src="images/photo2.jpg" alt="صورة خاصة">
+                </div>
+                <div class="photo-frame">
+                    <img src="images/photo3.jpg" alt="صورة خاصة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- زر الصعود للأعلى -->
+    <button id="scrollToTopBtn" title="Go to top">▲</button>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3 class="logo">HaRith</h3>
+                    <p data-i18n="footer_about">Web Designer & Developer aiming to provide the best digital solutions. Thanks for visiting my portfolio.</p>
+                </div>
+                
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footer_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col map-col">
+                    <h4 data-i18n="footer_uni">University of Technology</h4>
+                    <div class="mini-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.164669678688!2d44.44546231519556!3d33.31477298081292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f66a2d66649%3A0x246f91aec755134!2sUniversity%20of%20Technology!5e0!3m2!1sen!2siq!4v1625581234567!5m2!1sen!2siq" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">All rights reserved &copy; 2023 HaRith</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

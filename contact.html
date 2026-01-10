@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaRith | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo glitch" data-text="HaRith">HaRith</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="lang-btn" class="lang-btn">AR</button>
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="toggle-track">
+                        <span class="toggle-icon icon-sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </span>
+                        <span class="toggle-icon icon-moon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </span>
+                    </div>
+                    <div class="toggle-thumb"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-section hidden">
+        <div class="container">
+            <div class="contact-free-layout">
+                <div class="contact-avatar">
+                    <!-- ضع صورتك الرسمية هنا -->
+                    <img src="images/photo_23.jpg" alt="صورة حارث">
+                </div>
+                <h2 data-i18n="contact_name">Harith</h2>
+                <p class="bio" data-i18n="contact_bio">
+                    Web Developer and UI Designer, currently working on private projects and studying at the University of Technology.
+                    Available for Full Stack projects or UI design. You can contact me directly via the platforms below to discuss your project details.
+                </p>
+                
+                <div class="social-links">
+                    <!-- رابط الانستقرام -->
+                    <a href="https://instagram.com/5tp.9" target="_blank" class="social-btn insta">
+                        <!-- SVG أيقونة انستقرام -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+
+                    <!-- رابط التيليجرام -->
+                    <a href="https://t.me/FFFFFx" target="_blank" class="social-btn telegram">
+                        <!-- SVG أيقونة تيليجرام -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        <span>Telegram</span>
+                    </a>
+
+                    <!-- Discord -->
+                    <a href="https://discord.com/users/459948332861751296" target="_blank" class="social-btn discord">
+                        <!-- SVG أيقونة Gamepad (رمز للديكسورد) -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                            <path d="M6 12h4m-2-2v4m10-2h2"></path>
+                        </svg>
+                        <span>Discord</span>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:harith12342461@gmail.com" class="social-btn email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3 class="logo">HaRith</h3>
+                    <p data-i18n="footer_about">Web Designer & Developer aiming to provide the best digital solutions.</p>
+                </div>
+                
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footer_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col map-col">
+                    <h4 data-i18n="footer_uni">University of Technology</h4>
+                    <div class="mini-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.164669678688!2d44.44546231519556!3d33.31477298081292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f66a2d66649%3A0x246f91aec755134!2sUniversity%20of%20Technology!5e0!3m2!1sen!2siq!4v1625581234567!5m2!1sen!2siq" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">All rights reserved &copy; 2023 HaRith</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">▲</button>
+    <script src="script.js"></script>
+</body>
+</html>

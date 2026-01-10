@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaRith | Services</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo glitch" data-text="HaRith">HaRith</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="services.html" class="active" data-i18n="nav_services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="lang-btn" class="lang-btn">AR</button>
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="toggle-track">
+                        <span class="toggle-icon icon-sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </span>
+                        <span class="toggle-icon icon-moon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </span>
+                    </div>
+                    <div class="toggle-thumb"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="services-page hidden">
+        <div class="container">
+            <h1 class="page-title" data-i18n="services_page_title">Services & Pricing</h1>
+            <p class="page-desc" data-i18n="services_desc">I offer professional software solutions at competitive prices.</p>
+            
+            <div class="grid-container">
+                <!-- بطاقة الخدمة 1 -->
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3 data-i18n="service_1_title">Portfolio Building</h3>
+                        <span class="price" data-i18n="price_1">20$</span>
+                    </div>
+                    <ul class="features">
+                        <li data-i18n="service_1_f1">Modern and attractive design</li>
+                        <li data-i18n="service_1_f2">Responsive to all screens</li>
+                        <li data-i18n="service_1_f3">Social media integration</li>
+                        <li data-i18n="service_1_f4">(Price excludes domain)</li>
+                    </ul>
+                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                </div>
+
+                <!-- بطاقة الخدمة: بسيط -->
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3 data-i18n="service_simple_title">Basic</h3>
+                        <span class="price" data-i18n="price_simple">$50</span>
+                    </div>
+                    <ul class="features">
+                        <li data-i18n="service_simple_desc">High-converting Landing Page for ad campaigns</li>
+                    </ul>
+                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                </div>
+
+                <!-- بطاقة الخدمة: متوسط -->
+                <div class="pricing-card featured">
+                    <div class="price-header">
+                        <h3 data-i18n="service_medium_title">Standard</h3>
+                        <span class="price" data-i18n="price_medium">$150</span>
+                    </div>
+                    <ul class="features">
+                        <li data-i18n="service_medium_desc">Professional 5-page website (Home, About, Services...)</li>
+                    </ul>
+                    <a href="contact.html" class="btn" data-i18n="btn_order">Order Now</a>
+                </div>
+
+                <!-- بطاقة الخدمة: متقدم -->
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3 data-i18n="service_advanced_title">Premium</h3>
+                        <span class="price" data-i18n="price_advanced">$300+</span>
+                    </div>
+                    <ul class="features">
+                        <li data-i18n="service_advanced_desc">Dynamic website with Admin Dashboard & Official Emails</li>
+                    </ul>
+                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3 class="logo">HaRith</h3>
+                    <p data-i18n="footer_about">Web Designer & Developer aiming to provide the best digital solutions.</p>
+                </div>
+                
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footer_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col map-col">
+                    <h4 data-i18n="footer_uni">University of Technology</h4>
+                    <div class="mini-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.164669678688!2d44.44546231519556!3d33.31477298081292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f66a2d66649%3A0x246f91aec755134!2sUniversity%20of%20Technology!5e0!3m2!1sen!2siq!4v1625581234567!5m2!1sen!2siq" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">All rights reserved &copy; 2023 HaRith</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">▲</button>
+    <script src="script.js"></script>
+</body>
+</html>
