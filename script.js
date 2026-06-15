@@ -147,7 +147,9 @@ const translations = {
         price_advanced: "$300+",
         service_advanced_desc: "Dynamic website with Admin Dashboard & Official Emails",
         contact_name: "Harith",
-        contact_bio: "Web Developer and UI Designer, currently working on private projects and studying at the University of Technology. Available for Full Stack projects or UI design. You can contact me directly via the platforms below to discuss your project details."
+        contact_bio: "Web Developer and UI Designer, currently working on private projects and studying at the University of Technology. Available for Full Stack projects or UI design. You can contact me directly via the platforms below to discuss your project details.",
+        alt_hero_img: "Harith's Photo",
+        alt_gallery_img: "Personal Photo"
     },
     ar: {
         nav_home: "الرئيسية",
@@ -197,7 +199,9 @@ const translations = {
         price_advanced: "$300+",
         service_advanced_desc: "موقع ديناميكي مع لوحة تحكم (Dashboard) وبريد رسمي",
         contact_name: "حارث",
-        contact_bio: "مطور ويب ومصمم واجهات، أعمل حالياً على مشاريع خاصة وأدرس في الجامعة التكنولوجية. متاح لاستلام مشاريع برمجية كاملة (Full Stack) أو تصميم واجهات. يمكنك التواصل معي مباشرة عبر المنصات أدناه لمناقشة تفاصيل مشروعك."
+        contact_bio: "مطور ويب ومصمم واجهات، أعمل حالياً على مشاريع خاصة وأدرس في الجامعة التكنولوجية. متاح لاستلام مشاريع برمجية كاملة (Full Stack) أو تصميم واجهات. يمكنك التواصل معي مباشرة عبر المنصات أدناه لمناقشة تفاصيل مشروعك.",
+        alt_hero_img: "صورة حارث",
+        alt_gallery_img: "صورة خاصة"
     }
 };
 
@@ -214,7 +218,11 @@ function setLanguage(lang) {
     elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+            if (el.tagName === 'IMG') {
+                el.setAttribute('alt', translations[lang][key]);
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
         }
     });
 }
