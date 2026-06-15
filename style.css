@@ -58,6 +58,18 @@ h1, h2, h3, .logo, .plan-cost {
     letter-spacing: 1px;
 }
 
+/* تحسين الخطوط للعناوين العربية لتجنب الخط الافتراضي */
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] .logo, 
+[dir="rtl"] .plan-cost,
+[dir="rtl"] .btn,
+[dir="rtl"] .btn-outline {
+    font-family: var(--font-ar) !important;
+    letter-spacing: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -504,7 +516,7 @@ section {
     gap: 30px;
 }
 
-.card, .service-card, .photo-frame {
+.service-card, .photo-frame {
     background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
@@ -512,15 +524,57 @@ section {
     border: 1px solid var(--border-color);
 }
 
-.card:hover, .service-card:hover, .photo-frame:hover {
+.service-card:hover, .photo-frame:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
 }
 
-.card-img-holder img {
+/* --- Project Cards Redesign --- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(145deg, var(--card-bg), rgba(15, 15, 15, 0.95));
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+}
+
+[data-theme="light"] .project-card {
+    background: linear-gradient(145deg, var(--card-bg), rgba(245, 240, 240, 0.95));
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 30px rgba(229, 9, 20, 0.25);
+}
+
+[data-theme="light"] .project-card:hover {
+    box-shadow: 0 15px 30px rgba(229, 9, 20, 0.15);
+}
+
+.project-card .card-img-holder {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-card .card-img-holder img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .card-img-holder img {
+    transform: scale(1.08);
 }
 
 /* --- Gallery Specifics (تخصيص المعرض) --- */
@@ -553,18 +607,73 @@ section {
     filter: grayscale(0%) sepia(0%); /* ألوان طبيعية */
 }
 
-.card-content, .service-card {
+.service-card {
     padding: 20px;
 }
 
-.card-content h3 {
-    margin-bottom: 10px;
+.project-card .card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card .card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .card-content h3 {
     color: var(--primary-color);
 }
 
-.card-content p {
-    margin-bottom: 20px;
+.project-card .card-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Technology Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto; /* Pushes tags and button to the bottom */
+    margin-bottom: 18px;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    background: rgba(229, 9, 20, 0.08);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    font-weight: bold;
+    font-family: var(--font-en);
+    transition: all 0.3s ease;
+}
+
+[dir="rtl"] .project-tags span {
+    font-family: var(--font-ar);
+}
+
+.project-card:hover .project-tags span {
+    background: rgba(229, 9, 20, 0.15);
+    border-color: rgba(229, 9, 20, 0.4);
+}
+
+.project-card .btn-outline {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 /* --- Services Page --- */
