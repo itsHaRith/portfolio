@@ -244,7 +244,9 @@ function setLanguage(lang) {
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     
-    langBtn.textContent = lang === 'ar' ? 'EN' : 'AR';
+    if (langBtn) {
+        langBtn.textContent = lang === 'ar' ? 'EN' : 'AR';
+    }
     localStorage.setItem('lang', lang);
 
     elements.forEach(el => {
@@ -259,10 +261,12 @@ function setLanguage(lang) {
     });
 }
 
-langBtn.addEventListener('click', () => {
-    const currentLang = document.documentElement.getAttribute('lang');
-    setLanguage(currentLang === 'en' ? 'ar' : 'en');
-});
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        const currentLang = document.documentElement.getAttribute('lang');
+        setLanguage(currentLang === 'en' ? 'ar' : 'en');
+    });
+}
 
 // Load saved language
 const savedLang = localStorage.getItem('lang') || 'en';
@@ -277,11 +281,13 @@ function setTheme(theme) {
     localStorage.setItem('theme', theme);
 }
 
-themeBtn.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-});
+if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+    });
+}
 
 // تحميل الثيم المحفوظ
 const savedTheme = localStorage.getItem('theme') || 'dark';
