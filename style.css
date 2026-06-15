@@ -374,13 +374,17 @@ ul {
     padding: 12px 35px;
     border-radius: 30px; /* حواف دائرية أكثر عصرية */
     font-weight: bold;
+    font-family: inherit;
+    font-size: 1rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn {
     background-color: var(--primary-color);
     color: white;
+    border: none;
     box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
 }
 
@@ -392,6 +396,7 @@ ul {
 .btn-outline {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
+    background: transparent;
 }
 
 .btn-outline:hover {
@@ -439,7 +444,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .skill-card {
@@ -568,27 +573,137 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 30px 25px; /* تحسين الحشوة الداخلية لتبدو أرتب */
 }
 
 .pricing-card.featured {
     border: 2px solid var(--primary-color);
-    transform: scale(1.05);
+    transform: scale(1.03); /* تقليل التكبير المبالغ فيه */
 }
 
 .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.03) translateY(-10px);
+}
+
+.price-header h3 {
+    font-size: 1.4rem; /* تصغير عنوان الباقة */
+    margin-bottom: 5px;
+    color: var(--text-color);
 }
 
 .price {
     display: block;
-    font-size: 2rem;
+    font-size: 1.6rem; /* تصغير حجم السعر */
     color: var(--primary-color);
     margin: 10px 0;
 }
 
+.features {
+    text-align: left; /* محاذاة لليسار للانجليزية */
+    margin: 20px 0 30px;
+}
+
+[dir="rtl"] .features {
+    text-align: right; /* محاذاة لليمين للعربية */
+}
+
 .features li {
+    position: relative;
+    padding-left: 25px;
     margin-bottom: 10px;
+    font-size: 0.95rem; /* تصغير الخط وترتيبه */
     color: var(--text-secondary);
+}
+
+[dir="rtl"] .features li {
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+.features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+[dir="rtl"] .features li::before {
+    left: auto;
+    right: 0;
+}
+
+/* --- Modal (النافذة المنبثقة) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+[dir="rtl"] .modal-close {
+    right: auto;
+    left: 20px;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+#modal-body {
+    margin-bottom: 30px;
+}
+
+#modal-body .price-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 /* --- Contact Page --- */

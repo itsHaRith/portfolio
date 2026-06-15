@@ -108,6 +108,12 @@ const translations = {
         btn_contact: "Contact Me",
         btn_projects: "View Projects",
         skills_title: "Skills",
+        skills_frontend: "Front-End",
+        skills_backend: "Back-End & DBs",
+        skills_design: "Design & 3D",
+        skills_languages: "Languages",
+        skill_ar: "Arabic (Native)",
+        skill_en: "English (B2)",
         projects_title: "My Projects",
         proj_1_title: "Educational Courses Platform",
         proj_1_desc: "A modern and interactive platform for online courses, featuring an intuitive UI and responsive design for an optimal learning experience.",
@@ -130,23 +136,33 @@ const translations = {
         footer_copy: "All rights reserved &copy; 2023 HaRith",
         services_page_title: "Services & Pricing",
         services_desc: "I offer professional software solutions at competitive prices.",
-        service_1_title: "Portfolio Building",
-        price_1: "20$",
-        service_1_f1: "Modern and attractive design",
-        service_1_f2: "Responsive to all screens",
-        service_1_f3: "Social media integration",
-        service_1_f4: "(Price excludes domain)",
         btn_order: "Order Now",
-        service_simple_title: "Basic",
-        price_simple: "$50",
-        service_simple_desc: "High-converting Landing Page for ad campaigns",
-        service_medium_title: "Standard",
-        price_medium: "$150",
-        service_medium_desc: "Professional 5-page website (Home, About, Services...)",
-        service_advanced_title: "Premium",
-        price_advanced: "$300+",
-        service_advanced_desc: "Dynamic website with Admin Dashboard & Official Emails",
+        serv_1_title: "Landing Page / Portfolio",
+        price_1: "Starts at $50",
+        serv_1_f1: "Single page or personal portfolio",
+        serv_1_f2: "Frontend only (React & Tailwind)",
+        serv_1_f3: "Responsive design & fast loading",
+        serv_1_f4: "Free hosting setup (Vercel/GitHub)",
+        serv_2_title: "Business Website",
+        price_2: "Starts at $150",
+        serv_2_f1: "Multi-page site (Home, About, Services)",
+        serv_2_f2: "Modern UI/UX using Next.js",
+        serv_2_f3: "Basic SEO & Contact Forms",
+        serv_2_f4: "Custom Domain setup assistance",
+        serv_3_title: "E-Commerce & Dynamic",
+        price_3: "Starts at $350",
+        serv_3_f1: "Online store or dynamic site",
+        serv_3_f2: "Full Stack (Next.js + MongoDB)",
+        serv_3_f3: "Admin Dashboard for management",
+        serv_3_f4: "Includes Domain for the 1st year",
+        serv_4_title: "Custom Web System",
+        price_4: "Starts at $600+",
+        serv_4_f1: "Complex systems (CRM, Attendance, etc.)",
+        serv_4_f2: "Custom Backend (Python/Django)",
+        serv_4_f3: "Advanced Databases & Secure APIs",
+        serv_4_f4: "Scalable Cloud Deployment",
         contact_name: "Harith",
+        modal_btn_confirm: "Confirm Order & Contact",
         contact_bio: "Web Developer and UI Designer, currently working on private projects and studying at the University of Technology. Available for Full Stack projects or UI design. You can contact me directly via the platforms below to discuss your project details.",
         alt_hero_img: "Harith's Photo",
         alt_gallery_img: "Personal Photo"
@@ -160,6 +176,12 @@ const translations = {
         btn_contact: "تواصل",
         btn_projects: "شاهد أعمالي",
         skills_title: "المهارات",
+        skills_frontend: "تطوير الواجهات",
+        skills_backend: "الخوادم وقواعد البيانات",
+        skills_design: "التصميم وثلاثي الأبعاد",
+        skills_languages: "اللغات",
+        skill_ar: "العربية (اللغة الأم)",
+        skill_en: "الإنجليزية (مستوى B2)",
         projects_title: "مشاريعي",
         proj_1_title: "منصة كورسات تعليمية",
         proj_1_desc: "منصة تفاعلية وحديثة للكورسات عبر الإنترنت، تتميز بواجهة مستخدم سلسة وتصميم متجاوب لضمان أفضل تجربة تعليمية.",
@@ -182,23 +204,33 @@ const translations = {
         footer_copy: "جميع الحقوق محفوظة &copy; 2023 HaRith",
         services_page_title: "الخدمات والأسعار",
         services_desc: "أقدم لك حلول برمجية احترافية بأسعار تنافسية.",
-        service_1_title: "بناء بورتفوليو",
-        price_1: "20$",
-        service_1_f1: "تصميم عصري وجذاب",
-        service_1_f2: "متجاوب مع جميع الشاشات",
-        service_1_f3: "ربط مواقع التواصل",
-        service_1_f4: "(السعر لا يشمل الدومين)",
         btn_order: "اطلب الآن",
-        service_simple_title: "أساسي",
-        price_simple: "$50",
-        service_simple_desc: "صفحة هبوط (Landing Page) مخصصة للحملات الإعلانية",
-        service_medium_title: "متوسط",
-        price_medium: "$150",
-        service_medium_desc: "موقع تعريفي متكامل (5 صفحات) لعرض خدماتك",
-        service_advanced_title: "متقدم",
-        price_advanced: "$300+",
-        service_advanced_desc: "موقع ديناميكي مع لوحة تحكم (Dashboard) وبريد رسمي",
+        serv_1_title: "صفحة هبوط / بورتفوليو",
+        price_1: "يبدأ من $50",
+        serv_1_f1: "صفحة واحدة أو بورتفوليو شخصي",
+        serv_1_f2: "واجهات فقط (Front-End) بـ React و Tailwind",
+        serv_1_f3: "تصميم متجاوب وسريع التحميل",
+        serv_1_f4: "استضافة مجانية على (Vercel/GitHub)",
+        serv_2_title: "موقع تعريفي للأعمال",
+        price_2: "يبدأ من $150",
+        serv_2_f1: "موقع متعدد الصفحات (الرئيسية، خدمات...)",
+        serv_2_f2: "تجربة مستخدم حديثة باستخدام Next.js",
+        serv_2_f3: "تحسين محركات البحث ونماذج تواصل",
+        serv_2_f4: "المساعدة في حجز وربط الدومين (Domain)",
+        serv_3_title: "متاجر ومواقع ديناميكية",
+        price_3: "يبدأ من $350",
+        serv_3_f1: "متجر إلكتروني أو موقع محتوى ديناميكي",
+        serv_3_f2: "برمجة متكاملة (Full Stack) بـ Next.js و MongoDB",
+        serv_3_f3: "لوحة تحكم (Dashboard) لإدارة المنتجات",
+        serv_3_f4: "السعر يشمل دومين مجاني للسنة الأولى",
+        serv_4_title: "أنظمة برمجية مخصصة",
+        price_4: "يبدأ من $600+",
+        serv_4_f1: "تطبيقات معقدة (أنظمة حضور، CRM...)",
+        serv_4_f2: "باك إند مخصص (Back-End) بـ Python/Django",
+        serv_4_f3: "قواعد بيانات متقدمة وحماية عالية (APIs)",
+        serv_4_f4: "استضافة سحابية قابلة للتوسع",
         contact_name: "حارث",
+        modal_btn_confirm: "تأكيد الطلب والتواصل",
         contact_bio: "مطور ويب ومصمم واجهات، أعمل حالياً على مشاريع خاصة وأدرس في الجامعة التكنولوجية. متاح لاستلام مشاريع برمجية كاملة (Full Stack) أو تصميم واجهات. يمكنك التواصل معي مباشرة عبر المنصات أدناه لمناقشة تفاصيل مشروعك.",
         alt_hero_img: "صورة حارث",
         alt_gallery_img: "صورة خاصة"
@@ -254,3 +286,33 @@ themeBtn.addEventListener('click', () => {
 // تحميل الثيم المحفوظ
 const savedTheme = localStorage.getItem('theme') || 'dark';
 setTheme(savedTheme);
+
+// --- Modal Logic (نافذة الطلب المنبثقة) ---
+const serviceModal = document.getElementById('service-modal');
+const modalBody = document.getElementById('modal-body');
+const modalCloseBtns = document.querySelectorAll('.modal-close');
+const openModalBtns = document.querySelectorAll('.open-modal');
+
+if (serviceModal) {
+    openModalBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // الحصول على البطاقة التي تم الضغط عليها
+            const card = e.target.closest('.pricing-card');
+            const headerContent = card.querySelector('.price-header').outerHTML;
+            const featuresContent = card.querySelector('.features').outerHTML;
+            
+            // وضع التفاصيل داخل النافذة المنبثقة
+            modalBody.innerHTML = headerContent + featuresContent;
+            serviceModal.classList.add('active');
+        });
+    });
+
+    // إغلاق النافذة
+    modalCloseBtns.forEach(btn => btn.addEventListener('click', () => serviceModal.classList.remove('active')));
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === serviceModal) {
+            serviceModal.classList.remove('active');
+        }
+    });
+}

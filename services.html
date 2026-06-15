@@ -31,56 +31,76 @@
                 <!-- بطاقة الخدمة 1 -->
                 <div class="pricing-card">
                     <div class="price-header">
-                        <h3 data-i18n="service_1_title">Portfolio Building</h3>
-                        <span class="price" data-i18n="price_1">20$</span>
+                        <h3 data-i18n="serv_1_title">Landing Page / Portfolio</h3>
+                        <span class="price" data-i18n="price_1">Starts at $50</span>
                     </div>
                     <ul class="features">
-                        <li data-i18n="service_1_f1">Modern and attractive design</li>
-                        <li data-i18n="service_1_f2">Responsive to all screens</li>
-                        <li data-i18n="service_1_f3">Social media integration</li>
-                        <li data-i18n="service_1_f4">(Price excludes domain)</li>
+                        <li data-i18n="serv_1_f1">Single page or personal portfolio</li>
+                        <li data-i18n="serv_1_f2">Frontend only (React & Tailwind)</li>
+                        <li data-i18n="serv_1_f3">Responsive design & fast loading</li>
+                        <li data-i18n="serv_1_f4">Free hosting setup (Vercel/GitHub)</li>
                     </ul>
-                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                    <button class="btn-outline open-modal" data-i18n="btn_order">Order Now</button>
                 </div>
 
                 <!-- بطاقة الخدمة: بسيط -->
                 <div class="pricing-card">
                     <div class="price-header">
-                        <h3 data-i18n="service_simple_title">Basic</h3>
-                        <span class="price" data-i18n="price_simple">$50</span>
+                        <h3 data-i18n="serv_2_title">Business Website</h3>
+                        <span class="price" data-i18n="price_2">Starts at $150</span>
                     </div>
                     <ul class="features">
-                        <li data-i18n="service_simple_desc">High-converting Landing Page for ad campaigns</li>
+                        <li data-i18n="serv_2_f1">Multi-page site (Home, About, Services)</li>
+                        <li data-i18n="serv_2_f2">Modern UI/UX using Next.js</li>
+                        <li data-i18n="serv_2_f3">Basic SEO & Contact Forms</li>
+                        <li data-i18n="serv_2_f4">Custom Domain setup assistance</li>
                     </ul>
-                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                    <button class="btn-outline open-modal" data-i18n="btn_order">Order Now</button>
                 </div>
 
                 <!-- بطاقة الخدمة: متوسط -->
                 <div class="pricing-card featured">
                     <div class="price-header">
-                        <h3 data-i18n="service_medium_title">Standard</h3>
-                        <span class="price" data-i18n="price_medium">$150</span>
+                        <h3 data-i18n="serv_3_title">E-Commerce & Dynamic</h3>
+                        <span class="price" data-i18n="price_3">Starts at $350</span>
                     </div>
                     <ul class="features">
-                        <li data-i18n="service_medium_desc">Professional 5-page website (Home, About, Services...)</li>
+                        <li data-i18n="serv_3_f1">Online store or dynamic site</li>
+                        <li data-i18n="serv_3_f2">Full Stack (Next.js + MongoDB)</li>
+                        <li data-i18n="serv_3_f3">Admin Dashboard for management</li>
+                        <li data-i18n="serv_3_f4">Includes Domain for the 1st year</li>
                     </ul>
-                    <a href="contact.html" class="btn" data-i18n="btn_order">Order Now</a>
+                    <button class="btn open-modal" data-i18n="btn_order">Order Now</button>
                 </div>
 
                 <!-- بطاقة الخدمة: متقدم -->
                 <div class="pricing-card">
                     <div class="price-header">
-                        <h3 data-i18n="service_advanced_title">Premium</h3>
-                        <span class="price" data-i18n="price_advanced">$300+</span>
+                        <h3 data-i18n="serv_4_title">Custom Web System</h3>
+                        <span class="price" data-i18n="price_4">Starts at $600+</span>
                     </div>
                     <ul class="features">
-                        <li data-i18n="service_advanced_desc">Dynamic website with Admin Dashboard & Official Emails</li>
+                        <li data-i18n="serv_4_f1">Complex systems (CRM, Attendance, etc.)</li>
+                        <li data-i18n="serv_4_f2">Custom Backend (Python/Django)</li>
+                        <li data-i18n="serv_4_f3">Advanced Databases & Secure APIs</li>
+                        <li data-i18n="serv_4_f4">Scalable Cloud Deployment</li>
                     </ul>
-                    <a href="contact.html" class="btn-outline" data-i18n="btn_order">Order Now</a>
+                    <button class="btn-outline open-modal" data-i18n="btn_order">Order Now</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- النافذة المنبثقة (Modal) -->
+    <div id="service-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" title="Close">&times;</button>
+            <div id="modal-body">
+                <!-- سيتم وضع تفاصيل الخدمة هنا برمجياً -->
+            </div>
+            <a href="contact.html" class="btn" style="width: 100%; display: block;" data-i18n="modal_btn_confirm">Confirm Order & Contact</a>
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div class="container">
