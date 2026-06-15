@@ -297,8 +297,8 @@ if (serviceModal) {
     openModalBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             // الحصول على البطاقة التي تم الضغط عليها
-            const card = e.target.closest('.pricing-card');
-            const headerContent = card.querySelector('.price-header').outerHTML;
+            const card = e.target.closest('.service-card');
+            const headerContent = card.querySelector('.plan-header').outerHTML;
             const featuresContent = card.querySelector('.features').outerHTML;
             
             // وضع التفاصيل داخل النافذة المنبثقة
